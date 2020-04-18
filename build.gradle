@@ -1,0 +1,26 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'com.filemanager'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.+'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.+'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.+'
+    compile 'com.konghq:unirest-java:3.+'
+    compile 'ch.qos.logback:logback-classic:1.+'
+    compile 'org.slf4j:slf4j-api:2.+'
+    compile 'org.apache.commons:commons-lang3:3.10'
+}
+
+test {
+    useJUnitPlatform()
+}
